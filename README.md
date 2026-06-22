@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Casa Perfectă — Site Agenție Imobiliară
 
 Site web complet, responsive, pentru agenția imobiliară fictivă **Casa Perfectă**.
@@ -129,3 +130,6 @@ interne rupte).
 ---
 
 Spor la lansare! 🏡
+=======
+# CasaPerfecta
+>>>>>>> e25d051f79e8ed7bec8d27054a28aee4c037425a
