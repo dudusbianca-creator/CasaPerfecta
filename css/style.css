@@ -1,13 +1,5 @@
-/* ==========================================================================
-   CASA PERFECTĂ — style.css
-   Agenție imobiliară — foaie de stil principală
-  Paletă: albastru închis + verde accent (vezi variabile mai jos)
-   Fonturi: Montserrat (titluri) / Poppins (text)
-   ========================================================================== */
 
-/* ---------- 1. DESIGN TOKENS ---------- */
 :root{
-  /* Culori principale */
   --navy-900:#0b1f3a;
   --navy-800:#102b54;
   --navy-700:#15407a;
@@ -34,11 +26,9 @@
   --text-body:#2b3548;
   --text-muted:#667085;
 
-  /* Tipografie */
   --font-heading:'Montserrat', sans-serif;
   --font-body:'Poppins', sans-serif;
 
-  /* Layout */
   --radius-sm:8px;
   --radius-md:14px;
   --radius-lg:22px;
@@ -48,7 +38,6 @@
   --navbar-h:78px;
 }
 
-/* ---------- 2. RESET / BASE ---------- */
 html{scroll-behavior:smooth; scroll-padding-top:calc(var(--navbar-h) + 12px);}
 body{
   font-family:var(--font-body);
@@ -95,7 +84,6 @@ p{margin-bottom:1rem;}
 
 :focus-visible{outline:3px solid var(--gold-400); outline-offset:2px; border-radius:4px;}
 
-/* ---------- 3. BUTTONS ---------- */
 .btn{
   font-family:var(--font-heading);
   font-weight:700;
@@ -151,7 +139,6 @@ p{margin-bottom:1rem;}
 .btn-link-gold:hover{border-color:var(--gold-500); color:var(--gold-700);}
 .btn-sm-pill{border-radius:999px; padding:.55rem 1.2rem; font-size:.85rem;}
 
-/* ---------- 4. NAVBAR ---------- */
 .site-navbar{
   position:fixed; top:0; left:0; right:0; z-index:1040;
   height:var(--navbar-h);
@@ -200,7 +187,6 @@ p{margin-bottom:1rem;}
 .offcanvas-menu .btn{width:100%; margin-top:1.2rem;}
 .btn-close-custom{filter:invert(1); opacity:.8;}
 
-/* ---------- 5. HERO (index) ---------- */
 .hero-home{
   --hero-img:url("../img/hero/hero-home.jpg");
 }
@@ -249,7 +235,6 @@ p{margin-bottom:1rem;}
 .advantage-card h3{color:var(--white) !important; font-size:1.05rem; margin-bottom:.35rem;}
 .advantage-card p{color:rgba(255,255,255,.68); font-size:.92rem; margin-bottom:0;}
 
-/* Page header banner (toate paginile interioare) */
 .page-header{
   background:linear-gradient(120deg, var(--navy-900), var(--navy-700));
   color:var(--white);
@@ -260,7 +245,7 @@ p{margin-bottom:1rem;}
 .page-header h1{color:var(--white) !important; margin-bottom:.5rem;}
 .page-header p{color:rgba(255,255,255,.75); max-width:560px; margin:0 auto;}
 
-/* ---------- 6. CARDS: proprietăți ---------- */
+
 .property-card{
   background:var(--white);
   border-radius:var(--radius-md);
@@ -302,7 +287,6 @@ p{margin-bottom:1rem;}
 }
 .pc-specs span{display:flex; align-items:center; gap:.35rem;}
 
-/* ---------- 7. TESTIMONIALS ---------- */
 .testimonial-section{
   background:linear-gradient(120deg, var(--navy-900), var(--navy-700));
   color:var(--white);
@@ -332,7 +316,6 @@ p{margin-bottom:1rem;}
 }
 .slider-dots button.active{background:var(--gold-500); width:22px; border-radius:6px;}
 
-/* ---------- 8. COUNTERS ---------- */
 .counter-row{display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; text-align:center;}
 @media (max-width:767.98px){.counter-row{grid-template-columns:repeat(2,1fr); gap:1.2rem;}}
 .counter-item .counter-icon{
@@ -347,7 +330,6 @@ p{margin-bottom:1rem;}
 .counter-item .counter-label{color:var(--text-muted); font-size:.92rem;}
 .counter-row.on-dark .counter-label{color:rgba(255,255,255,.65);}
 
-/* ---------- 9. FOOTER ---------- */
 .site-footer{background:var(--navy-900); color:rgba(255,255,255,.72);}
 .site-footer h3{color:var(--white) !important; font-size:1.05rem; margin-bottom:1.1rem;}
 .site-footer .brand-text strong{color:var(--white);}
@@ -376,7 +358,7 @@ p{margin-bottom:1rem;}
 }
 .footer-bottom{border-top:1px solid rgba(255,255,255,.08); padding:1.2rem 0; font-size:.85rem; text-align:center; color:rgba(255,255,255,.5);}
 
-/* ---------- 10. BACK TO TOP ---------- */
+
 .back-to-top{
   position:fixed; right:1.4rem; bottom:1.4rem; z-index:1030;
   width:48px; height:48px; border-radius:50%;
@@ -389,7 +371,6 @@ p{margin-bottom:1rem;}
 .back-to-top.show{opacity:1; visibility:visible; transform:translateY(0);}
 .back-to-top:hover{background:var(--gold-600);}
 
-/* ---------- 11. LISTINGS PAGE: filtre ---------- */
 .filter-bar{
   background:var(--white);
   border-radius:var(--radius-md);
@@ -420,7 +401,6 @@ p{margin-bottom:1rem;}
 .pagination-custom button.active{background:var(--navy-800); color:var(--white); border-color:var(--navy-800);}
 .pagination-custom button:disabled{opacity:.4;}
 
-/* ---------- 12. ABOUT PAGE ---------- */
 .value-list li{display:flex; gap:1rem; margin-bottom:1.1rem;}
 .value-list .value-icon{
   width:42px; height:42px; border-radius:10px; background:var(--gold-500); color:var(--navy-900);
@@ -452,7 +432,6 @@ p{margin-bottom:1rem;}
 .timeline-item h3{margin-top:.25rem; font-size:1rem;}
 .timeline-item p{color:var(--text-muted); font-size:.92rem; margin-bottom:0;}
 
-/* ---------- 13. GALERIE + LIGHTBOX ---------- */
 .gallery-filters{display:flex; flex-wrap:wrap; gap:.6rem; justify-content:center; margin-bottom:2.5rem;}
 .gallery-filters button{
   border:1px solid var(--gray-200); background:var(--white); color:var(--navy-700);
@@ -510,7 +489,6 @@ p{margin-bottom:1rem;}
   .lightbox-close{top:.7rem; right:.7rem;}
 }
 
-/* ---------- 14. FORMS (contact / evaluare) ---------- */
 .form-card{background:var(--white); border-radius:var(--radius-lg); box-shadow:var(--shadow-md); padding:2.2rem; border:1px solid var(--gray-200);}
 .form-card-dark{background:var(--navy-800); color:var(--white); border-radius:var(--radius-lg); padding:2.2rem;}
 .form-card-dark h2, .form-card-dark h3{color:var(--white) !important;}
@@ -538,7 +516,6 @@ textarea.form-control{min-height:120px;}
 .form-success-msg.show{display:flex;}
 .form-card-dark .form-success-msg{background:rgba(76,175,80,.18); color:#a5e6a8;}
 
-/* Rezultat evaluare / credit */
 .result-box{
   background:linear-gradient(135deg, var(--navy-800), var(--navy-700));
   color:var(--white); border-radius:var(--radius-lg); padding:2.2rem; text-align:center; height:100%;
@@ -554,7 +531,6 @@ textarea.form-control{min-height:120px;}
 .calc-breakdown div{display:flex; justify-content:space-between; padding:.4rem 0; border-bottom:1px dashed rgba(255,255,255,.15);}
 .calc-breakdown div:last-child{border-bottom:0;}
 
-/* ---------- 15. CONTACT INFO + MAP ---------- */
 .contact-info-list li{display:flex; gap:1rem; margin-bottom:1.4rem;}
 .contact-info-list .ci-icon{
   width:46px; height:46px; border-radius:12px; background:var(--gold-500); color:var(--navy-900);
@@ -564,14 +540,13 @@ textarea.form-control{min-height:120px;}
 .contact-info-list p{font-size:.9rem; color:rgba(255,255,255,.65); margin-bottom:0;}
 .map-frame{border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-md); border:0; width:100%; height:280px;}
 
-/* ---------- 16. UI COMPONENTS PALETTE (referință internă, neutilizat pe site) ---------- */
 .skip-link{
   position:absolute; left:-999px; top:auto; background:var(--gold-500); color:var(--navy-900);
   padding:.8rem 1.2rem; z-index:2000; border-radius:0 0 10px 0; font-weight:700;
 }
 .skip-link:focus{left:0; top:0;}
 
-/* ---------- 17. ANIMATIONS / REVEAL ---------- */
+
 .reveal{opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease;}
 .reveal.in{opacity:1; transform:translateY(0);}
 @media (prefers-reduced-motion: reduce){
@@ -580,7 +555,7 @@ textarea.form-control{min-height:120px;}
   .reveal{opacity:1; transform:none;}
 }
 
-/* ---------- 18. UTILITARE ---------- */
+
 .text-gold{color:var(--gold-500) !important;}
 .bg-gold-soft{background:var(--gold-300) !important;}
 .rounded-xl{border-radius:var(--radius-lg) !important;}
@@ -589,7 +564,6 @@ hr.divider{border-top:1px solid var(--gray-200); opacity:1;}
 
 ::selection{background:var(--gold-400); color:var(--navy-900);}
 
-/* Scrollbar fin (webkit) */
 ::-webkit-scrollbar{width:10px;}
 ::-webkit-scrollbar-track{background:var(--gray-100);}
 ::-webkit-scrollbar-thumb{background:var(--gold-400); border-radius:10px;}
