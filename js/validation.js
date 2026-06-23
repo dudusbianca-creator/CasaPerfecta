@@ -1,25 +1,16 @@
-/* ==========================================================================
-   CASA PERFECTĂ — validation.js
-   Validare formulare: contact.html (#contactForm) și evaluation.html
-   (#evaluationForm). Expune și un API reutilizabil (window.CasaPerfectaValidation)
-   folosit de calculator.js pentru a valida #evaluationForm și #mortgageForm
-   înainte de a calcula rezultatele.
-   ========================================================================== */
 (function () {
   "use strict";
 
-  var PHONE_REGEX = /^\d{8}$/; // acceptă numere Moldova după normalizare
+  var PHONE_REGEX = /^\d{8}$/; 
 
   function getWrapper(input) {
     return input.closest(".col-sm-6, .col-md-6, .col-12, .col") || input.parentElement;
   }
 
-  /** Validează un singur câmp și actualizează clasele vizuale. Returnează true/false. */
   function validateField(input) {
     var wrapper = getWrapper(input);
     var isValid = input.checkValidity();
 
-    // Validare suplimentară pentru telefon (format Moldova)
     if (isValid && input.type === "tel") {
       var cleaned = input.value.replace(/\s|-/g, "").replace(/^\+373/, "").replace(/^0/, "");
       if (!PHONE_REGEX.test(cleaned)) {
@@ -38,7 +29,6 @@
     return isValid;
   }
 
-  /** Validează toate câmpurile required/relevante dintr-un formular. Returnează true/false. */
   function validateForm(form) {
     var fields = form.querySelectorAll("input[required], select[required], textarea[required]");
     var allValid = true;
@@ -56,7 +46,6 @@
     return allValid;
   }
 
-  /** Activează validare live (la blur și la input după prima validare) pentru un formular. */
   function attachLiveValidation(form) {
     var fields = form.querySelectorAll("input, select, textarea");
     fields.forEach(function (field) {
@@ -92,7 +81,6 @@
 
   document.addEventListener("DOMContentLoaded", function () {
 
-    /* ---------- FORMULAR CONTACT (contact.html) ---------- */
     var contactForm = document.getElementById("contactForm");
     if (contactForm) {
       attachLiveValidation(contactForm);
@@ -105,15 +93,10 @@
       });
     }
 
-    /* ---------- FORMULAR EVALUARE PROPRIETATE (evaluation.html) ---------- */
     var evaluationForm = document.getElementById("evaluationForm");
     if (evaluationForm) {
       attachLiveValidation(evaluationForm);
-      // Submit-ul propriu-zis (calculul) este gestionat în calculator.js,
-      // care apelează window.CasaPerfectaValidation.validateForm() înainte de a calcula.
     }
-
-    /* ---------- FORMULAR CREDIT IPOTECAR (evaluation.html) ---------- */
     var mortgageForm = document.getElementById("mortgageForm");
     if (mortgageForm) {
       attachLiveValidation(mortgageForm);
@@ -121,7 +104,6 @@
 
   });
 
-  // API public, reutilizat de calculator.js
   window.CasaPerfectaValidation = {
     validateField: validateField,
     validateForm: validateForm,

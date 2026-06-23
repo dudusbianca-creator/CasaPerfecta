@@ -1,15 +1,3 @@
-/* ==========================================================================
-   CASA PERFECTĂ — main.js
-   Funcționalități comune tuturor paginilor:
-   - Navbar (stare la scroll, link activ)
-   - Smooth scroll pentru ancore interne
-   - Buton Back to Top
-   - Slider testimoniale (index.html)
-   - Counter animat (index.html, about.html)
-   - Filtrare galerie + lightbox (gallery.html)
-   - Newsletter (footer, toate paginile)
-   - An curent în footer
-   ========================================================================== */
 (function () {
   "use strict";
 
@@ -27,13 +15,11 @@
     initNewsletterForm();
   }
 
-  /* ---------- An curent footer ---------- */
   function setCurrentYear() {
     var el = document.getElementById("currentYear");
     if (el) el.textContent = new Date().getFullYear();
   }
 
-  /* ---------- 1. NAVBAR: stare la scroll ---------- */
   function initNavbarScroll() {
     var navbar = document.getElementById("siteNavbar");
     if (!navbar) return;
@@ -48,7 +34,6 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  /* ---------- 2. SMOOTH SCROLL pentru ancore interne (#id) ---------- */
   function initSmoothScroll() {
     document.addEventListener("click", function (e) {
       var link = e.target.closest('a[href^="#"]');
@@ -62,7 +47,6 @@
       var top = target.getBoundingClientRect().top + window.pageYOffset - navbarH - 16;
       window.scrollTo({ top: top, behavior: "smooth" });
 
-      // Închide off-canvas mobil dacă e deschis
       var offcanvasEl = document.getElementById("mobileMenu");
       if (offcanvasEl && offcanvasEl.classList.contains("show") && window.bootstrap) {
         var instance = window.bootstrap.Offcanvas.getInstance(offcanvasEl);
@@ -71,7 +55,6 @@
     });
   }
 
-  /* ---------- 3. BACK TO TOP ---------- */
   function initBackToTop() {
     var btn = document.getElementById("backToTop");
     if (!btn) return;
@@ -89,7 +72,6 @@
     });
   }
 
-  /* ---------- 4. SLIDER TESTIMONIALE (index.html) ---------- */
   function initTestimonialSlider() {
     var track = document.getElementById("testimonialSlides");
     if (!track) return;
@@ -139,8 +121,6 @@
     update();
     restart();
   }
-
-  /* ---------- 5. COUNTER ANIMAT (index.html, about.html) ---------- */
   function initCounters() {
     var counters = document.querySelectorAll(".counter-num");
     if (!counters.length) return;
@@ -158,7 +138,7 @@
       function step(timestamp) {
         if (!startTime) startTime = timestamp;
         var progress = Math.min((timestamp - startTime) / duration, 1);
-        var eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+        var eased = 1 - Math.pow(1 - progress, 3); 
         var value = Math.floor(eased * target);
         el.textContent = value + suffix;
         if (progress < 1) {
@@ -185,7 +165,6 @@
     }
   }
 
-  /* ---------- 6. FILTRARE GALERIE (gallery.html) ---------- */
   function initGalleryFilter() {
     var filterWrap = document.getElementById("galleryFilters");
     var items = document.querySelectorAll(".gallery-item");
@@ -207,7 +186,6 @@
     });
   }
 
-  /* ---------- 7. LIGHTBOX GALERIE (gallery.html) ---------- */
   function initLightbox() {
     var overlay = document.getElementById("lightbox");
     if (!overlay) return;
@@ -271,7 +249,6 @@
     });
   }
 
-  /* ---------- 8. NEWSLETTER (footer) ---------- */
   function initNewsletterForm() {
     var form = document.getElementById("newsletterForm");
     if (!form) return;

@@ -1,460 +1,815 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ro-MD">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anunțuri Imobiliare – Casa Perfectă</title>
-<meta name="description" content="Descoperă cele mai bune oferte imobiliare: apartamente, case și vile. Filtrează după tip, preț și localitate pe Casa Perfectă.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="listings.html">
-<meta property="og:title" content="Anunțuri Imobiliare – Casa Perfectă">
-<meta property="og:description" content="Apartamente, case și vile verificate, cu filtrare după tip, preț și localitate.">
-<meta property="og:type" content="website">
-<link rel="icon" type="image/png" href="img/logo.png">
-<link rel="apple-touch-icon" href="img/logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-</head>
-<body>
-<a href="#main-content" class="skip-link">Sari la conținutul principal</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anunțuri Imobiliare – Casa Perfectă</title>
+    <meta
+      name="description"
+      content="Descoperă cele mai bune oferte imobiliare: apartamente, case și vile. Filtrează după tip, preț și localitate pe Casa Perfectă."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="listings.html" />
+    <meta property="og:title" content="Anunțuri Imobiliare – Casa Perfectă" />
+    <meta
+      property="og:description"
+      content="Apartamente, case și vile verificate, cu filtrare după tip, preț și localitate."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="apple-touch-icon" href="img/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Sari la conținutul principal</a>
 
-<header>
-  <nav class="site-navbar" id="siteNavbar">
-    <div class="container navbar-inner">
-      <a href="index.html" class="brand" aria-label="Casa Perfectă – Acasă">
-        <img src="img/logo.png" alt="Sigla agenției imobiliare Casa Perfectă" width="42" height="42">
-        <span class="brand-text"><strong>Casa Perfectă</strong><span>Agenție Imobiliară</span></span>
-      </a>
-      <ul class="nav-links d-none d-lg-flex">
-        <li><a href="index.html">Acasă</a></li>
-        <li><a href="listings.html" class="active" aria-current="page">Anunțuri</a></li>
-        <li><a href="about.html">Despre noi</a></li>
-        <li><a href="gallery.html">Galerie</a></li>
-        <li><a href="evaluation.html">Evaluare</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="d-none d-lg-block">
-        <a href="contact.html" class="btn btn-gold btn-sm-pill">Contactează-ne</a>
-      </div>
-      <button class="navbar-toggler-custom d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Deschide meniul de navigare">
-        <i class="bi bi-list"></i>
-      </button>
-    </div>
-  </nav>
-
-  <div class="offcanvas offcanvas-end offcanvas-menu" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
-    <div class="offcanvas-header">
-      <a href="index.html" class="brand">
-        <img src="img/logo.png" alt="Casa Perfectă" width="38" height="38">
-        <span class="brand-text"><strong>Casa Perfectă</strong><span>Agenție Imobiliară</span></span>
-      </a>
-      <button type="button" class="btn-close btn-close-custom" data-bs-dismiss="offcanvas" aria-label="Închide meniul"></button>
-    </div>
-    <div class="offcanvas-body d-flex flex-column">
-      <ul class="nav-links">
-        <li><a href="index.html">Acasă</a></li>
-        <li><a href="listings.html" class="active" aria-current="page">Anunțuri</a></li>
-        <li><a href="about.html">Despre noi</a></li>
-        <li><a href="gallery.html">Galerie</a></li>
-        <li><a href="evaluation.html">Evaluare</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <a href="contact.html" class="btn btn-gold w-100">Contactează-ne</a>
-      <a href="tel:+37322123456" class="btn btn-outline-light-custom w-100 mt-2">Sună acum</a>
-    </div>
-  </div>
-</header>
-
-<main id="main-content">
-  <section class="page-header">
-    <div class="container">
-      <h1>Anunțuri Imobiliare</h1>
-      <p>Descoperă cele mai bune oferte imobiliare</p>
-    </div>
-  </section>
-
-  <section class="section-pad pt-0">
-    <div class="container">
-
-      <form class="filter-bar row g-3" id="filterForm">
-        <div class="col-6 col-md-3">
-          <label for="filterType" class="form-label">Tip proprietate</label>
-          <select class="form-select" id="filterType">
-            <option value="all" selected>Toate</option>
-            <option value="apartament">Apartament</option>
-            <option value="casa">Casă</option>
-            <option value="vila">Vilă</option>
-            <option value="teren">Teren</option>
-            <option value="comercial">Spațiu comercial</option>
-          </select>
+    <header>
+      <nav class="site-navbar" id="siteNavbar">
+        <div class="container navbar-inner">
+          <a href="index.html" class="brand" aria-label="Casa Perfectă – Acasă">
+            <img
+              src="img/logo.png"
+              alt="Sigla agenției imobiliare Casa Perfectă"
+              width="42"
+              height="42"
+            />
+            <span class="brand-text"
+              ><strong>Casa Perfectă</strong
+              ><span>Agenție Imobiliară</span></span
+            >
+          </a>
+          <ul class="nav-links d-none d-lg-flex">
+            <li><a href="index.html">Acasă</a></li>
+            <li>
+              <a href="listings.html" class="active" aria-current="page"
+                >Anunțuri</a
+              >
+            </li>
+            <li><a href="about.html">Despre noi</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="evaluation.html">Evaluare</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="d-none d-lg-block">
+            <a href="contact.html" class="btn btn-gold btn-sm-pill"
+              >Contactează-ne</a
+            >
+          </div>
+          <button
+            class="navbar-toggler-custom d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu"
+            aria-label="Deschide meniul de navigare"
+          >
+            <i class="bi bi-list"></i>
+          </button>
         </div>
-        <div class="col-6 col-md-2">
-          <label for="filterPriceMin" class="form-label">Preț min</label>
-          <div class="input-group">
-            <span class="input-group-text">MDL</span>
-            <input type="number" class="form-control" id="filterPriceMin" placeholder="Min" min="0" step="1000">
+      </nav>
+
+      <div
+        class="offcanvas offcanvas-end offcanvas-menu"
+        tabindex="-1"
+        id="mobileMenu"
+        aria-labelledby="mobileMenuLabel"
+      >
+        <div class="offcanvas-header">
+          <a href="index.html" class="brand">
+            <img
+              src="img/logo.png"
+              alt="Casa Perfectă"
+              width="38"
+              height="38"
+            />
+            <span class="brand-text"
+              ><strong>Casa Perfectă</strong
+              ><span>Agenție Imobiliară</span></span
+            >
+          </a>
+          <button
+            type="button"
+            class="btn-close btn-close-custom"
+            data-bs-dismiss="offcanvas"
+            aria-label="Închide meniul"
+          ></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+          <ul class="nav-links">
+            <li><a href="index.html">Acasă</a></li>
+            <li>
+              <a href="listings.html" class="active" aria-current="page"
+                >Anunțuri</a
+              >
+            </li>
+            <li><a href="about.html">Despre noi</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="evaluation.html">Evaluare</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <a href="contact.html" class="btn btn-gold w-100">Contactează-ne</a>
+          <a
+            href="tel:+37322123456"
+            class="btn btn-outline-light-custom w-100 mt-2"
+            >Sună acum</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="page-header">
+        <div class="container">
+          <h1>Anunțuri Imobiliare</h1>
+          <p>Descoperă cele mai bune oferte imobiliare</p>
+        </div>
+      </section>
+
+      <section class="section-pad pt-0">
+        <div class="container">
+          <form class="filter-bar row g-3" id="filterForm">
+            <div class="col-6 col-md-3">
+              <label for="filterType" class="form-label">Tip proprietate</label>
+              <select class="form-select" id="filterType">
+                <option value="all" selected>Toate</option>
+                <option value="apartament">Apartament</option>
+                <option value="casa">Casă</option>
+                <option value="vila">Vilă</option>
+                <option value="teren">Teren</option>
+                <option value="comercial">Spațiu comercial</option>
+              </select>
+            </div>
+            <div class="col-6 col-md-2">
+              <label for="filterPriceMin" class="form-label">Preț min</label>
+              <div class="input-group">
+                <span class="input-group-text">MDL</span>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="filterPriceMin"
+                  placeholder="Min"
+                  min="0"
+                  step="1000"
+                />
+              </div>
+            </div>
+            <div class="col-6 col-md-2">
+              <label for="filterPriceMax" class="form-label">Preț max</label>
+              <div class="input-group">
+                <span class="input-group-text">MDL</span>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="filterPriceMax"
+                  placeholder="Max"
+                  min="0"
+                  step="1000"
+                />
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <label for="filterLocation" class="form-label">Localitate</label>
+              <select class="form-select" id="filterLocation">
+                <option value="all" selected>Toate</option>
+                <option value="chisinau">Chișinău</option>
+                <option value="botanica">Botanica</option>
+                <option value="buiucani">Buiucani</option>
+                <option value="telecentru">Telecentru</option>
+                <option value="stauceni">Stăuceni</option>
+                <option value="balti">Bălți</option>
+                <option value="cahul">Cahul</option>
+                <option value="orhei">Orhei</option>
+                <option value="soroca">Soroca</option>
+                <option value="ungheni">Ungheni</option>
+                <option value="comrat">Comrat</option>
+                <option value="criuleni">Criuleni</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-2 d-flex gap-2 align-items-end">
+              <button
+                type="submit"
+                class="btn btn-navy flex-fill"
+                id="applyFilters"
+              >
+                Filtrează
+              </button>
+            </div>
+          </form>
+
+          <div class="results-bar">
+            <p class="results-count" id="resultsCount">12 proprietăți găsite</p>
+            <div class="d-flex align-items-center gap-2">
+              <label for="sortSelect" class="form-label mb-0"
+                >Sortează după:</label
+              >
+              <select class="form-select sort-select" id="sortSelect">
+                <option value="recommended" selected>Recomandate</option>
+                <option value="price-asc">Preț: crescător</option>
+                <option value="price-desc">Preț: descrescător</option>
+                <option value="area-asc">Suprafață: crescătoare</option>
+                <option value="area-desc">Suprafață: descrescătoare</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row g-4" id="listingsGrid">
+            <div
+              class="col-md-6 col-lg-4 property-col"
+              id="property-1"
+              data-type="apartament"
+              data-price="1657500"
+              data-area="60"
+              data-rooms="2"
+              data-baths="1"
+              data-location="buiucani"
+            >
+              <article class="property-card">
+                <div class="pc-media">
+                  <span class="pc-badge">Apartament</span>
+
+                  <img
+                    src="img/properties/property-1.jpg"
+                    alt="Apartament cu 2 camere de vânzare în Buiucani, Chișinău"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                  />
+                </div>
+                <div class="pc-body">
+                  <h3><a href="#property-1">Apartament 2 camere</a></h3>
+                  <p class="pc-location">
+                    <i class="bi bi-geo-alt-fill"></i> Buiucani, Chișinău
+                  </p>
+                  <p class="pc-price">MDL 1.657.500</p>
+                  <div class="pc-specs">
+                    <span><i class="bi bi-rulers"></i> 60 m²</span>
+                    <span><i class="bi bi-door-closed"></i> 2 camere</span>
+                    <span><i class="bi bi-droplet"></i> 1 baie</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-4 property-col"
+              id="property-2"
+              data-type="apartament"
+              data-price="2437500"
+              data-area="80"
+              data-rooms="2"
+              data-baths="1"
+              data-location="botanica"
+            >
+              <article class="property-card">
+                <div class="pc-media">
+                  <span class="pc-badge">Apartament</span>
+
+                  <img
+                    src="img/properties/property-2.jpg"
+                    alt="Apartament cu 3 camere de vânzare în Botanica, Chișinău"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                  />
+                </div>
+                <div class="pc-body">
+                  <h3><a href="#property-2">Apartament 3 camere</a></h3>
+                  <p class="pc-location">
+                    <i class="bi bi-geo-alt-fill"></i> Botanica, Chișinău
+                  </p>
+                  <p class="pc-price">MDL 2.437.500</p>
+                  <div class="pc-specs">
+                    <span><i class="bi bi-rulers"></i> 80 m²</span>
+                    <span><i class="bi bi-door-closed"></i> 2 camere</span>
+                    <span><i class="bi bi-droplet"></i> 1 baie</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-4 property-col"
+              id="property-3"
+              data-type="casa"
+              data-price="4875000"
+              data-area="120"
+              data-rooms="4"
+              data-baths="3"
+              data-location="chisinau"
+            >
+              <article class="property-card">
+                <div class="pc-media">
+                  <span class="pc-badge">Casă</span>
+
+                  <img
+                    src="img/properties/property-3.jpg"
+                    alt="Casă modernă de vânzare în Centru, Chișinău"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                  />
+                </div>
+                <div class="pc-body">
+                  <h3><a href="#property-3">Casă modernă</a></h3>
+                  <p class="pc-location">
+                    <i class="bi bi-geo-alt-fill"></i> Centru, Chișinău
+                  </p>
+                  <p class="pc-price">MDL 4.875.000</p>
+                  <div class="pc-specs">
+                    <span><i class="bi bi-rulers"></i> 120 m²</span>
+                    <span><i class="bi bi-door-closed"></i> 4 camere</span>
+                    <span><i class="bi bi-droplet"></i> 3 băi</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-4 property-col"
+              id="property-4"
+              data-type="vila"
+              data-price="8775000"
+              data-area="200"
+              data-rooms="5"
+              data-baths="4"
+              data-location="stauceni"
+            >
+              <article class="property-card">
+                <div class="pc-media">
+                  <span class="pc-badge">Vilă</span>
+
+                  <img
+                    src="img/properties/property-4.jpg"
+                    alt="Vilă de lux de vânzare în Stăuceni, Chișinău"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                  />
+                </div>
+                <div class="pc-body">
+                  <h3><a href="#property-4">Vilă de lux</a></h3>
+                  <p class="pc-location">
+                    <i class="bi bi-geo-alt-fill"></i> Stăuceni, Chișinău
+                  </p>
+                  <p class="pc-price">MDL 8.775.000</p>
+                  <div class="pc-specs">
+                    <span><i class="bi bi-rulers"></i> 200 m²</span>
+                    <span><i class="bi bi-door-closed"></i> 5 camere</span>
+                    <span><i class="bi bi-droplet"></i> 4 băi</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-4 property-col"
+              id="property-5"
+              data-type="apartament"
+              data-price="1521000"
+              data-area="65"
+              data-rooms="2"
+              data-baths="1"
+              data-location="telecentru"
+            >
+              <article class="property-card">
+                <div class="pc-media">
+                  <span class="pc-badge">Apartament</span>
+
+                  <img
+                    src="img/properties/property-5.jpg"
+                    alt="Apartament cu 2 camere de vânzare în Telecentru, Chișinău"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                  />
+                </div>
+                <div class="pc-body">
+                  <h3><a href="#property-5">Apartament 2 camere</a></h3>
+                  <p class="pc-location">
+                    <i class="bi bi-geo-alt-fill"></i> Telecentru, Chișinău
+                  </p>
+                  <p class="pc-price">MDL 1.521.000</p>
+                  <div class="pc-specs">
+                    <span><i class="bi bi-rulers"></i> 65 m²</span>
+                    <span><i class="bi bi-door-closed"></i> 2 camere</span>
+                    <span><i class="bi bi-droplet"></i> 1 baie</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-4 property-col"
+              id="property-6"
+              data-type="casa"
+              data-price="3510000"
+              data-area="100"
+              data-rooms="3"
+              data-baths="2"
+              data-location="soroca"
+            >
+              <article class="property-card">
+                <div class="pc-media">
+                  <span class="pc-badge">Casă</span>
+
+                  <img
+                    src="img/properties/property-6.jpg"
+                    alt="Casă de vacanță de vânzare în Soroca"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                  />
+                </div>
+                <div class="pc-body">
+                  <h3><a href="#property-6">Casă de vacanță</a></h3>
+                  <p class="pc-location">
+                    <i class="bi bi-geo-alt-fill"></i> Soroca
+                  </p>
+                  <p class="pc-price">MDL 3.510.000</p>
+                  <div class="pc-specs">
+                    <span><i class="bi bi-rulers"></i> 100 m²</span>
+                    <span><i class="bi bi-door-closed"></i> 3 camere</span>
+                    <span><i class="bi bi-droplet"></i> 2 băi</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-4 property-col"
+              id="property-7"
+              data-type="apartament"
+              data-price="1911000"
+              data-area="75"
+              data-rooms="3"
+              data-baths="2"
+              data-location="balti"
+            >
+              <article class="property-card">
+                <div class="pc-media">
+                  <span class="pc-badge">Apartament</span>
+
+                  <img
+                    src="img/properties/property-7.jpg"
+                    alt="Apartament cu 3 camere de vânzare în centrul Bălțiului"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                  />
+                </div>
+                <div class="pc-body">
+                  <h3><a href="#property-7">Apartament 3 camere</a></h3>
+                  <p class="pc-location">
+                    <i class="bi bi-geo-alt-fill"></i> Centru, Bălți
+                  </p>
+                  <p class="pc-price">MDL 1.911.000</p>
+                  <div class="pc-specs">
+                    <span><i class="bi bi-rulers"></i> 75 m²</span>
+                    <span><i class="bi bi-door-closed"></i> 3 camere</span>
+                    <span><i class="bi bi-droplet"></i> 2 băi</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-4 property-col"
+              id="property-8"
+              data-type="casa"
+              data-price="4095000"
+              data-area="140"
+              data-rooms="4"
+              data-baths="3"
+              data-location="cahul"
+            >
+              <article class="property-card">
+                <div class="pc-media">
+                  <span class="pc-badge">Casă</span>
+
+                  <img
+                    src="img/properties/property-8.jpg"
+                    alt="Casă modernă de vânzare în Cahul"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                  />
+                </div>
+                <div class="pc-body">
+                  <h3><a href="#property-8">Casă modernă</a></h3>
+                  <p class="pc-location">
+                    <i class="bi bi-geo-alt-fill"></i> Cahul
+                  </p>
+                  <p class="pc-price">MDL 4.095.000</p>
+                  <div class="pc-specs">
+                    <span><i class="bi bi-rulers"></i> 140 m²</span>
+                    <span><i class="bi bi-door-closed"></i> 4 camere</span>
+                    <span><i class="bi bi-droplet"></i> 3 băi</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-4 property-col"
+              id="property-9"
+              data-type="vila"
+              data-price="7410000"
+              data-area="180"
+              data-rooms="5"
+              data-baths="4"
+              data-location="orhei"
+            >
+              <article class="property-card">
+                <div class="pc-media">
+                  <span class="pc-badge">Vilă</span>
+
+                  <img
+                    src="img/properties/property-9.jpg"
+                    alt="Vilă de vânzare în Orhei"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                  />
+                </div>
+                <div class="pc-body">
+                  <h3><a href="#property-9">Vilă</a></h3>
+                  <p class="pc-location">
+                    <i class="bi bi-geo-alt-fill"></i> Orhei
+                  </p>
+                  <p class="pc-price">MDL 7.410.000</p>
+                  <div class="pc-specs">
+                    <span><i class="bi bi-rulers"></i> 180 m²</span>
+                    <span><i class="bi bi-door-closed"></i> 5 camere</span>
+                    <span><i class="bi bi-droplet"></i> 4 băi</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-4 property-col"
+              id="property-10"
+              data-type="apartament"
+              data-price="1209000"
+              data-area="38"
+              data-rooms="1"
+              data-baths="1"
+              data-location="ungheni"
+            >
+              <article class="property-card">
+                <div class="pc-media">
+                  <span class="pc-badge">Apartament</span>
+
+                  <img
+                    src="img/properties/property-10.jpg"
+                    alt="Apartament cu o cameră de vânzare în Ungheni"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                  />
+                </div>
+                <div class="pc-body">
+                  <h3><a href="#property-10">Apartament 1 cameră</a></h3>
+                  <p class="pc-location">
+                    <i class="bi bi-geo-alt-fill"></i> Ungheni
+                  </p>
+                  <p class="pc-price">MDL 1.209.000</p>
+                  <div class="pc-specs">
+                    <span><i class="bi bi-rulers"></i> 38 m²</span>
+                    <span><i class="bi bi-door-closed"></i> 1 cameră</span>
+                    <span><i class="bi bi-droplet"></i> 1 baie</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-4 property-col"
+              id="property-11"
+              data-type="teren"
+              data-price="1852500"
+              data-area="500"
+              data-rooms="0"
+              data-baths="0"
+              data-location="criuleni"
+            >
+              <article class="property-card">
+                <div class="pc-media">
+                  <span class="pc-badge">Teren</span>
+
+                  <img
+                    src="img/properties/property-11.jpg"
+                    alt="Teren intravilan de vânzare în Criuleni"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                  />
+                </div>
+                <div class="pc-body">
+                  <h3><a href="#property-11">Teren intravilan</a></h3>
+                  <p class="pc-location">
+                    <i class="bi bi-geo-alt-fill"></i> Criuleni
+                  </p>
+                  <p class="pc-price">MDL 1.852.500</p>
+                  <div class="pc-specs">
+                    <span><i class="bi bi-rulers"></i> 500 m²</span>
+                    <span><i class="bi bi-signpost-split"></i> Intravilan</span>
+                    <span><i class="bi bi-check-circle"></i> Acte la zi</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-4 property-col"
+              id="property-12"
+              data-type="comercial"
+              data-price="6240000"
+              data-area="150"
+              data-rooms="0"
+              data-baths="2"
+              data-location="chisinau"
+            >
+              <article class="property-card">
+                <div class="pc-media">
+                  <span class="pc-badge">Comercial</span>
+
+                  <img
+                    src="img/properties/property-12.jpg"
+                    alt="Spațiu comercial de vânzare în centrul Chișinăului"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                  />
+                </div>
+                <div class="pc-body">
+                  <h3><a href="#property-12">Spațiu comercial</a></h3>
+                  <p class="pc-location">
+                    <i class="bi bi-geo-alt-fill"></i> Centru, Chișinău
+                  </p>
+                  <p class="pc-price">MDL 6.240.000</p>
+                  <div class="pc-specs">
+                    <span><i class="bi bi-rulers"></i> 150 m²</span>
+                    <span><i class="bi bi-shop"></i> Vad comercial</span>
+                    <span><i class="bi bi-droplet"></i> 2 băi</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="no-results" id="noResults">
+            <i class="bi bi-house-x"></i>
+            <h3>Nicio proprietate găsită</h3>
+            <p>
+              Încearcă să modifici criteriile de filtrare pentru a vedea mai
+              multe rezultate.
+            </p>
+          </div>
+
+          <nav
+            class="pagination-custom"
+            id="pagination"
+            aria-label="Paginare anunțuri"
+          ></nav>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container py-5">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <a href="index.html" class="brand mb-3 d-inline-flex">
+              <img
+                src="img/logo.png"
+                alt="Casa Perfectă"
+                width="42"
+                height="42"
+              />
+              <span class="brand-text"
+                ><strong>Casa Perfectă</strong
+                ><span>Agenție Imobiliară</span></span
+              >
+            </a>
+            <p>
+              Transformăm visurile în adrese. Găsește casa perfectă pentru tine,
+              alături de o echipă în care poți avea încredere.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Pagina noastră de Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Pagina noastră de Instagram"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Pagina noastră de LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h3>Meniu</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Acasă</a></li>
+              <li><a href="listings.html">Anunțuri</a></li>
+              <li><a href="about.html">Despre noi</a></li>
+              <li><a href="gallery.html">Galerie</a></li>
+              <li><a href="evaluation.html">Evaluare</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h3>Contact</h3>
+            <ul class="footer-contact">
+              <li>
+                <i class="bi bi-geo-alt-fill"></i
+                ><span
+                  >Str. Mihai Eminescu, sect. Centru, Chișinău, Republica
+                  Moldova</span
+                >
+              </li>
+              <li>
+                <i class="bi bi-telephone-fill"></i
+                ><span><a href="tel:+37322123456">+373 22 123 456</a></span>
+              </li>
+              <li>
+                <i class="bi bi-envelope-fill"></i
+                ><span
+                  ><a href="mailto:contact@casaperfecta.md"
+                    >contact@casaperfecta.md</a
+                  ></span
+                >
+              </li>
+              <li>
+                <i class="bi bi-clock-fill"></i
+                ><span
+                  >Luni - Vineri: 09:00 - 18:00<br />Sâmbătă: 10:00 -
+                  14:00</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h3>Stiri</h3>
+            <p>Abonează-te pentru noutăți și oferte exclusive.</p>
+            <form class="newsletter-form" id="newsletterForm" novalidate>
+              <label for="newsletterEmail" class="visually-hidden"
+                >Adresa ta de email</label
+              >
+              <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Email-ul tău"
+                required
+              />
+              <button type="submit" aria-label="Abonează-te">
+                <i class="bi bi-send-fill"></i>
+              </button>
+            </form>
           </div>
         </div>
-        <div class="col-6 col-md-2">
-          <label for="filterPriceMax" class="form-label">Preț max</label>
-          <div class="input-group">
-            <span class="input-group-text">MDL</span>
-            <input type="number" class="form-control" id="filterPriceMax" placeholder="Max" min="0" step="1000">
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <label for="filterLocation" class="form-label">Localitate</label>
-          <select class="form-select" id="filterLocation">
-            <option value="all" selected>Toate</option>
-            <option value="chisinau">Chișinău</option>
-            <option value="botanica">Botanica</option>
-            <option value="buiucani">Buiucani</option>
-            <option value="telecentru">Telecentru</option>
-            <option value="stauceni">Stăuceni</option>
-            <option value="balti">Bălți</option>
-            <option value="cahul">Cahul</option>
-            <option value="orhei">Orhei</option>
-            <option value="soroca">Soroca</option>
-            <option value="ungheni">Ungheni</option>
-            <option value="comrat">Comrat</option>
-            <option value="criuleni">Criuleni</option>
-          </select>
-        </div>
-        <div class="col-12 col-md-2 d-flex gap-2 align-items-end">
-          <button type="submit" class="btn btn-navy flex-fill" id="applyFilters">Filtrează</button>
-          
-        </div>
-      </form>
-
-      <div class="results-bar">
-        <p class="results-count" id="resultsCount">12 proprietăți găsite</p>
-        <div class="d-flex align-items-center gap-2">
-          <label for="sortSelect" class="form-label mb-0">Sortează după:</label>
-          <select class="form-select sort-select" id="sortSelect">
-            <option value="recommended" selected>Recomandate</option>
-            <option value="price-asc">Preț: crescător</option>
-            <option value="price-desc">Preț: descrescător</option>
-            <option value="area-asc">Suprafață: crescătoare</option>
-            <option value="area-desc">Suprafață: descrescătoare</option>
-          </select>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          &copy; <span id="currentYear">2026</span> Casa Perfectă. Toate
+          drepturile rezervate.
         </div>
       </div>
+    </footer>
 
-      <div class="row g-4" id="listingsGrid">
+    <button class="back-to-top" id="backToTop" aria-label="Înapoi sus">
+      <i class="bi bi-arrow-up"></i>
+    </button>
 
-        <div class="col-md-6 col-lg-4 property-col" id="property-1" data-type="apartament" data-price="1657500" data-area="60" data-rooms="2" data-baths="1" data-location="buiucani">
-          <article class="property-card">
-            <div class="pc-media">
-              <span class="pc-badge">Apartament</span>
-              <button class="pc-fav" aria-label="Adaugă la favorite"><i class="bi bi-heart"></i></button>
-              <img src="img/properties/property-1.jpg" alt="Apartament cu 2 camere de vânzare în Buiucani, Chișinău" loading="lazy" width="800" height="600">
-            </div>
-            <div class="pc-body">
-              <h3><a href="#property-1">Apartament 2 camere</a></h3>
-              <p class="pc-location"><i class="bi bi-geo-alt-fill"></i> Buiucani, Chișinău</p>
-              <p class="pc-price">MDL 1.657.500</p>
-              <div class="pc-specs">
-                <span><i class="bi bi-rulers"></i> 60 m²</span>
-                <span><i class="bi bi-door-closed"></i> 2 camere</span>
-                <span><i class="bi bi-droplet"></i> 1 baie</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4 property-col" id="property-2" data-type="apartament" data-price="2437500" data-area="80" data-rooms="2" data-baths="1" data-location="botanica">
-          <article class="property-card">
-            <div class="pc-media">
-              <span class="pc-badge">Apartament</span>
-              <button class="pc-fav" aria-label="Adaugă la favorite"><i class="bi bi-heart"></i></button>
-              <img src="img/properties/property-2.jpg" alt="Apartament cu 3 camere de vânzare în Botanica, Chișinău" loading="lazy" width="800" height="600">
-            </div>
-            <div class="pc-body">
-              <h3><a href="#property-2">Apartament 3 camere</a></h3>
-              <p class="pc-location"><i class="bi bi-geo-alt-fill"></i> Botanica, Chișinău</p>
-              <p class="pc-price">MDL 2.437.500</p>
-              <div class="pc-specs">
-                <span><i class="bi bi-rulers"></i> 80 m²</span>
-                <span><i class="bi bi-door-closed"></i> 2 camere</span>
-                <span><i class="bi bi-droplet"></i> 1 baie</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4 property-col" id="property-3" data-type="casa" data-price="4875000" data-area="120" data-rooms="4" data-baths="3" data-location="chisinau">
-          <article class="property-card">
-            <div class="pc-media">
-              <span class="pc-badge">Casă</span>
-              <button class="pc-fav" aria-label="Adaugă la favorite"><i class="bi bi-heart"></i></button>
-              <img src="img/properties/property-3.jpg" alt="Casă modernă de vânzare în Centru, Chișinău" loading="lazy" width="800" height="600">
-            </div>
-            <div class="pc-body">
-              <h3><a href="#property-3">Casă modernă</a></h3>
-              <p class="pc-location"><i class="bi bi-geo-alt-fill"></i> Centru, Chișinău</p>
-              <p class="pc-price">MDL 4.875.000</p>
-              <div class="pc-specs">
-                <span><i class="bi bi-rulers"></i> 120 m²</span>
-                <span><i class="bi bi-door-closed"></i> 4 camere</span>
-                <span><i class="bi bi-droplet"></i> 3 băi</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4 property-col" id="property-4" data-type="vila" data-price="8775000" data-area="200" data-rooms="5" data-baths="4" data-location="stauceni">
-          <article class="property-card">
-            <div class="pc-media">
-              <span class="pc-badge">Vilă</span>
-              <button class="pc-fav" aria-label="Adaugă la favorite"><i class="bi bi-heart"></i></button>
-              <img src="img/properties/property-4.jpg" alt="Vilă de lux de vânzare în Stăuceni, Chișinău" loading="lazy" width="800" height="600">
-            </div>
-            <div class="pc-body">
-              <h3><a href="#property-4">Vilă de lux</a></h3>
-              <p class="pc-location"><i class="bi bi-geo-alt-fill"></i> Stăuceni, Chișinău</p>
-              <p class="pc-price">MDL 8.775.000</p>
-              <div class="pc-specs">
-                <span><i class="bi bi-rulers"></i> 200 m²</span>
-                <span><i class="bi bi-door-closed"></i> 5 camere</span>
-                <span><i class="bi bi-droplet"></i> 4 băi</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4 property-col" id="property-5" data-type="apartament" data-price="1521000" data-area="65" data-rooms="2" data-baths="1" data-location="telecentru">
-          <article class="property-card">
-            <div class="pc-media">
-              <span class="pc-badge">Apartament</span>
-              <button class="pc-fav" aria-label="Adaugă la favorite"><i class="bi bi-heart"></i></button>
-              <img src="img/properties/property-5.jpg" alt="Apartament cu 2 camere de vânzare în Telecentru, Chișinău" loading="lazy" width="800" height="600">
-            </div>
-            <div class="pc-body">
-              <h3><a href="#property-5">Apartament 2 camere</a></h3>
-              <p class="pc-location"><i class="bi bi-geo-alt-fill"></i> Telecentru, Chișinău</p>
-              <p class="pc-price">MDL 1.521.000</p>
-              <div class="pc-specs">
-                <span><i class="bi bi-rulers"></i> 65 m²</span>
-                <span><i class="bi bi-door-closed"></i> 2 camere</span>
-                <span><i class="bi bi-droplet"></i> 1 baie</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4 property-col" id="property-6" data-type="casa" data-price="3510000" data-area="100" data-rooms="3" data-baths="2" data-location="soroca">
-          <article class="property-card">
-            <div class="pc-media">
-              <span class="pc-badge">Casă</span>
-              <button class="pc-fav" aria-label="Adaugă la favorite"><i class="bi bi-heart"></i></button>
-              <img src="img/properties/property-6.jpg" alt="Casă de vacanță de vânzare în Soroca" loading="lazy" width="800" height="600">
-            </div>
-            <div class="pc-body">
-              <h3><a href="#property-6">Casă de vacanță</a></h3>
-              <p class="pc-location"><i class="bi bi-geo-alt-fill"></i> Soroca</p>
-              <p class="pc-price">MDL 3.510.000</p>
-              <div class="pc-specs">
-                <span><i class="bi bi-rulers"></i> 100 m²</span>
-                <span><i class="bi bi-door-closed"></i> 3 camere</span>
-                <span><i class="bi bi-droplet"></i> 2 băi</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4 property-col" id="property-7" data-type="apartament" data-price="1911000" data-area="75" data-rooms="3" data-baths="2" data-location="balti">
-          <article class="property-card">
-            <div class="pc-media">
-              <span class="pc-badge">Apartament</span>
-              <button class="pc-fav" aria-label="Adaugă la favorite"><i class="bi bi-heart"></i></button>
-              <img src="img/properties/property-7.jpg" alt="Apartament cu 3 camere de vânzare în centrul Bălțiului" loading="lazy" width="800" height="600">
-            </div>
-            <div class="pc-body">
-              <h3><a href="#property-7">Apartament 3 camere</a></h3>
-              <p class="pc-location"><i class="bi bi-geo-alt-fill"></i> Centru, Bălți</p>
-              <p class="pc-price">MDL 1.911.000</p>
-              <div class="pc-specs">
-                <span><i class="bi bi-rulers"></i> 75 m²</span>
-                <span><i class="bi bi-door-closed"></i> 3 camere</span>
-                <span><i class="bi bi-droplet"></i> 2 băi</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4 property-col" id="property-8" data-type="casa" data-price="4095000" data-area="140" data-rooms="4" data-baths="3" data-location="cahul">
-          <article class="property-card">
-            <div class="pc-media">
-              <span class="pc-badge">Casă</span>
-              <button class="pc-fav" aria-label="Adaugă la favorite"><i class="bi bi-heart"></i></button>
-              <img src="img/properties/property-8.jpg" alt="Casă modernă de vânzare în Cahul" loading="lazy" width="800" height="600">
-            </div>
-            <div class="pc-body">
-              <h3><a href="#property-8">Casă modernă</a></h3>
-              <p class="pc-location"><i class="bi bi-geo-alt-fill"></i> Cahul</p>
-              <p class="pc-price">MDL 4.095.000</p>
-              <div class="pc-specs">
-                <span><i class="bi bi-rulers"></i> 140 m²</span>
-                <span><i class="bi bi-door-closed"></i> 4 camere</span>
-                <span><i class="bi bi-droplet"></i> 3 băi</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4 property-col" id="property-9" data-type="vila" data-price="7410000" data-area="180" data-rooms="5" data-baths="4" data-location="orhei">
-          <article class="property-card">
-            <div class="pc-media">
-              <span class="pc-badge">Vilă</span>
-              <button class="pc-fav" aria-label="Adaugă la favorite"><i class="bi bi-heart"></i></button>
-              <img src="img/properties/property-9.jpg" alt="Vilă de vânzare în Orhei" loading="lazy" width="800" height="600">
-            </div>
-            <div class="pc-body">
-              <h3><a href="#property-9">Vilă</a></h3>
-              <p class="pc-location"><i class="bi bi-geo-alt-fill"></i> Orhei</p>
-              <p class="pc-price">MDL 7.410.000</p>
-              <div class="pc-specs">
-                <span><i class="bi bi-rulers"></i> 180 m²</span>
-                <span><i class="bi bi-door-closed"></i> 5 camere</span>
-                <span><i class="bi bi-droplet"></i> 4 băi</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4 property-col" id="property-10" data-type="apartament" data-price="1209000" data-area="38" data-rooms="1" data-baths="1" data-location="ungheni">
-          <article class="property-card">
-            <div class="pc-media">
-              <span class="pc-badge">Apartament</span>
-              <button class="pc-fav" aria-label="Adaugă la favorite"><i class="bi bi-heart"></i></button>
-              <img src="img/properties/property-10.jpg" alt="Apartament cu o cameră de vânzare în Ungheni" loading="lazy" width="800" height="600">
-            </div>
-            <div class="pc-body">
-              <h3><a href="#property-10">Apartament 1 cameră</a></h3>
-              <p class="pc-location"><i class="bi bi-geo-alt-fill"></i> Ungheni</p>
-              <p class="pc-price">MDL 1.209.000</p>
-              <div class="pc-specs">
-                <span><i class="bi bi-rulers"></i> 38 m²</span>
-                <span><i class="bi bi-door-closed"></i> 1 cameră</span>
-                <span><i class="bi bi-droplet"></i> 1 baie</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4 property-col" id="property-11" data-type="teren" data-price="1852500" data-area="500" data-rooms="0" data-baths="0" data-location="criuleni">
-          <article class="property-card">
-            <div class="pc-media">
-              <span class="pc-badge">Teren</span>
-              <button class="pc-fav" aria-label="Adaugă la favorite"><i class="bi bi-heart"></i></button>
-              <img src="img/properties/property-11.jpg" alt="Teren intravilan de vânzare în Criuleni" loading="lazy" width="800" height="600">
-            </div>
-            <div class="pc-body">
-              <h3><a href="#property-11">Teren intravilan</a></h3>
-              <p class="pc-location"><i class="bi bi-geo-alt-fill"></i> Criuleni</p>
-              <p class="pc-price">MDL 1.852.500</p>
-              <div class="pc-specs">
-                <span><i class="bi bi-rulers"></i> 500 m²</span>
-                <span><i class="bi bi-signpost-split"></i> Intravilan</span>
-                <span><i class="bi bi-check-circle"></i> Acte la zi</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-6 col-lg-4 property-col" id="property-12" data-type="comercial" data-price="6240000" data-area="150" data-rooms="0" data-baths="2" data-location="chisinau">
-          <article class="property-card">
-            <div class="pc-media">
-              <span class="pc-badge">Comercial</span>
-              <button class="pc-fav" aria-label="Adaugă la favorite"><i class="bi bi-heart"></i></button>
-              <img src="img/properties/property-12.jpg" alt="Spațiu comercial de vânzare în centrul Chișinăului" loading="lazy" width="800" height="600">
-            </div>
-            <div class="pc-body">
-              <h3><a href="#property-12">Spațiu comercial</a></h3>
-              <p class="pc-location"><i class="bi bi-geo-alt-fill"></i> Centru, Chișinău</p>
-              <p class="pc-price">MDL 6.240.000</p>
-              <div class="pc-specs">
-                <span><i class="bi bi-rulers"></i> 150 m²</span>
-                <span><i class="bi bi-shop"></i> Vad comercial</span>
-                <span><i class="bi bi-droplet"></i> 2 băi</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-      </div>
-
-      <div class="no-results" id="noResults">
-        <i class="bi bi-house-x"></i>
-        <h3>Nicio proprietate găsită</h3>
-        <p>Încearcă să modifici criteriile de filtrare pentru a vedea mai multe rezultate.</p>
-      </div>
-
-      <nav class="pagination-custom" id="pagination" aria-label="Paginare anunțuri"></nav>
-
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container py-5">
-    <div class="row gy-4">
-      <div class="col-lg-4 col-md-6">
-        <a href="index.html" class="brand mb-3 d-inline-flex">
-          <img src="img/logo.png" alt="Casa Perfectă" width="42" height="42">
-          <span class="brand-text"><strong>Casa Perfectă</strong><span>Agenție Imobiliară</span></span>
-        </a>
-        <p>Transformăm visurile în adrese. Găsește casa perfectă pentru tine, alături de o echipă în care poți avea încredere.</p>
-        <div class="social-icons">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Pagina noastră de Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Pagina noastră de Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Pagina noastră de LinkedIn"><i class="bi bi-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-6">
-        <h3>Meniu</h3>
-        <ul class="footer-links">
-          <li><a href="index.html">Acasă</a></li>
-          <li><a href="listings.html">Anunțuri</a></li>
-          <li><a href="about.html">Despre noi</a></li>
-          <li><a href="gallery.html">Galerie</a></li>
-          <li><a href="evaluation.html">Evaluare</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <h3>Contact</h3>
-        <ul class="footer-contact">
-          <li><i class="bi bi-geo-alt-fill"></i><span>Str. Exemplu nr. 123, sect. Centru, Chișinău, Republica Moldova</span></li>
-          <li><i class="bi bi-telephone-fill"></i><span><a href="tel:+37322123456">+373 22 123 456</a></span></li>
-          <li><i class="bi bi-envelope-fill"></i><span><a href="mailto:contact@casaperfecta.md">contact@casaperfecta.md</a></span></li>
-          <li><i class="bi bi-clock-fill"></i><span>Luni - Vineri: 09:00 - 18:00<br>Sâmbătă: 10:00 - 14:00</span></li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <h3>Newsletter</h3>
-        <p>Abonează-te pentru noutăți și oferte exclusive.</p>
-        <form class="newsletter-form" id="newsletterForm" novalidate>
-          <label for="newsletterEmail" class="visually-hidden">Adresa ta de email</label>
-          <input type="email" id="newsletterEmail" placeholder="Email-ul tău" required>
-          <button type="submit" aria-label="Abonează-te"><i class="bi bi-send-fill"></i></button>
-        </form>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="container">&copy; <span id="currentYear">2026</span> Casa Perfectă. Toate drepturile rezervate.</div>
-  </div>
-</footer>
-
-<button class="back-to-top" id="backToTop" aria-label="Înapoi sus"><i class="bi bi-arrow-up"></i></button>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/main.js" defer></script>
-<script src="js/listings.js" defer></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/listings.js" defer></script>
+  </body>
 </html>

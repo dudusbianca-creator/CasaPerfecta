@@ -1,13 +1,9 @@
-/* ==========================================================================
-   CASA PERFECTĂ — listings.js
-   Filtrare, sortare și paginare pentru listings.html
-   ========================================================================== */
 (function () {
   "use strict";
 
   document.addEventListener("DOMContentLoaded", function () {
     var grid = document.getElementById("listingsGrid");
-    if (!grid) return; // doar pe listings.html
+    if (!grid) return; 
 
     var cards = Array.prototype.slice.call(grid.querySelectorAll(".property-col"));
     var filterForm = document.getElementById("filterForm");
@@ -52,7 +48,6 @@
       } else if (sortVal === "area-desc") {
         filtered.sort(function (a, b) { return parseFloat(b.dataset.area) - parseFloat(a.dataset.area); });
       }
-      // "recommended" => păstrează ordinea originală din HTML
 
       return filtered;
     }
@@ -63,7 +58,6 @@
       var totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
       if (currentPage > totalPages) currentPage = totalPages;
 
-      // Ascunde toate cardurile
       cards.forEach(function (card) { card.style.display = "none"; });
 
       if (total === 0) {
@@ -73,7 +67,6 @@
         var startIdx = (currentPage - 1) * PAGE_SIZE;
         var pageItems = result.slice(startIdx, startIdx + PAGE_SIZE);
 
-        // Reordonează în DOM conform sortării/filtrării paginii curente
         pageItems.forEach(function (card) {
           grid.appendChild(card);
           card.style.display = "";
@@ -145,7 +138,6 @@
       render();
     });
 
-    // Filtrare live și pe schimbare select (în plus față de submit)
     [typeSelect, locationSelect].forEach(function (el) {
       el.addEventListener("change", function () {
         currentPage = 1;

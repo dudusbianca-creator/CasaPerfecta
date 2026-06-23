@@ -1,25 +1,16 @@
-/* ==========================================================================
-   CASA PERFECTĂ — calculator.js
-   1) Estimare valoare proprietate (#evaluationForm)
-   2) Calculator credit ipotecar (#mortgageForm)
-   Ambele trăiesc pe evaluation.html. Validarea câmpurilor este delegată
-   către window.CasaPerfectaValidation (validation.js).
-   ========================================================================== */
 (function () {
   "use strict";
 
   var CURRENT_YEAR = new Date().getFullYear();
 
   function formatMDL(value) {
-    var rounded = Math.round(value / 100) * 100; // rotunjire la sută de lei
+    var rounded = Math.round(value / 100) * 100; 
     return new Intl.NumberFormat("ro-MD", {
       style: "currency",
       currency: "MDL",
       maximumFractionDigits: 0
     }).format(rounded);
   }
-
-  /* ---------- 1. ESTIMARE VALOARE PROPRIETATE ---------- */
   var PRICE_PER_M2 = {
     chisinau: 22000,
     botanica: 21500,
@@ -113,8 +104,6 @@
       }
     });
   }
-
-  /* ---------- 2. CALCULATOR CREDIT IPOTECAR ---------- */
   function computeMortgage(principal, annualRatePct, years) {
     var n = years * 12;
     var r = (annualRatePct / 100) / 12;
@@ -180,12 +169,10 @@
       recalculate(true);
     });
 
-    // Recalculare live la modificarea câmpurilor (rezultat dinamic)
     [loanAmount, interestRate, loanTerm, downPayment].forEach(function (input) {
       input.addEventListener("input", function () { recalculate(false); });
     });
 
-    // Calcul inițial cu valorile prestabilite
     recalculate(false);
   }
 
